@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <section class="v5-custom-info">
+        <style>
+            .v5-custom-info {
+                font-family: 'Roboto';
+                font-weight: 500
+            }
+
+            .v5-custom-info .v5-appDownload,
+            .v5-custom-info .v5-guide,
+            .v5-custom-info .v5-register-guide,
+            .v5-custom-info .v5-service {
+                transition: all .5s
+            }
+
+            .v5-custom-info .title-text {
+                font-size: 36px;
+                line-height: 46px;
+                font-family: 'Roboto';
+                font-weight: 700
+            }
+
+            .v5-custom-info .title-tip {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 16px;
+                font-family: 'Roboto';
+            }
+
+            .v5-custom-info .v5-appDownload,
+            .v5-custom-info .v5-guide,
+            .v5-custom-info .v5-service {
+                width: 1200px;
+                margin: auto
+            }
+
+            .v5-custom-info .v5-guide .guide-content {
+                margin-top: 60px;
+                display: flex;
+                justify-content: space-between
+            }
+
+            .v5-custom-info .v5-guide .guide-item {
+                width: 386px
+            }
+
+            .v5-custom-info .v5-guide .guide-item dt {
+                width: 100%;
+                margin-bottom: 16px;
+                position: relative
+            }
+
+            .v5-custom-info .v5-guide .guide-item dt .layout {
+                position: absolute;
+                width: 386px;
+                height: 240px;
+                left: 0;
+                top: 0;
+                background: rgba(0, 0, 0, .1);
+                display: none;
+                border-radius: 4px
+            }
+
+            /* .v5-custom-info .v5-guide .guide-item dt:hover .layout {
+                display: block
+            } */
+
+            .v5-custom-info .v5-guide .guide-item dt img {
+                width: 173.76px;
+                height: 169px;
+            }
+
+            .v5-custom-info .v5-guide .guide-item dd {
+                font-size: 16px;
+                line-height: 26px
+            }
+
+            .v5-custom-info .v5-service {
+                margin-top: 120px
+            }
+
+            .v5-custom-info .v5-service .title-text {
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 70px
+            }
+
+            .v5-custom-info .v5-service .service-content {
+                display: flex;
+                justify-content: space-between
+            }
+
+            .v5-custom-info .v5-service .service-content .service-item {
+                width: 343px
+            }
+
+            .v5-custom-info .v5-service .service-content .service-item dt {
+                height: 72px;
+                line-height: 72px;
+                margin-bottom: 50px
+            }
+
+            .v5-custom-info .v5-service .service-content .service-item dd div {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 13px;
+                font-weight: 500
+            }
+
+            .v5-custom-info .v5-service .service-content .service-item dd span {
+                font-size: 14px;
+                line-height: 24px
+            }
+
+            .v5-custom-info .v5-appDownload {
+                display: flex;
+                justify-content: space-between;
+                /* margin-top: 160px */
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce {
+                padding: 4% 6%;
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .title-text {
+                font-size: 36px;
+                line-height: 44px;
+                margin-bottom: 14px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .title-tip {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 23px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .intro-item {
+                margin-bottom: 28px;
+                display: flex;
+                align-items: center
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .intro-item svg {
+                margin-right: 24px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .intro-item p {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 21px;
+                font-family: 'Roboto';
+                margin-bottom: 8px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .intro-item span {
+                display: inline-block;
+                width: 340px;
+                font-size: 14px;
+                line-height: 18px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download {
+                margin-top: 16px;
+                display: flex;
+                align-items: center;
+                position: relative;
+                height: 44px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download img {
+                margin-right: 8px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode {
+                position: relative
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode .img {
+                display: inline-block;
+                width: 44px;
+                height: 44px;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+                border-radius: 4px;
+                padding: 10px;
+                box-sizing: border-box
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode .img img {
+                width: 18px;
+                height: 18px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode .hoverShow {
+                display: none
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode:hover .hoverShow {
+                display: inline-block
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode:hover .hoverHide {
+                display: none
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .download-store {
+                width: 160px
+            }
+
+            .v5-custom-info .v5-appDownload .app-preview img {
+                width: 272px
+            }
+
+            .v5-custom-info .v5-appDownload .qrcode-preview {
+                width: 0;
+                height: 0;
+                opacity: 0;
+                overflow: hidden;
+                text-align: center;
+                transition: all .3s;
+                border-radius: 8px;
+                box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .1);
+                position: absolute;
+                left: 0;
+                bottom: 56px;
+                box-sizing: border-box;
+                background: #fff
+            }
+
+            .v5-custom-info .v5-appDownload .qrcode-preview:hover {
+                width: 150px;
+                height: 190px;
+                opacity: 1
+            }
+
+            .v5-custom-info .v5-appDownload .qrcode-preview img {
+                width: 100%
+            }
+
+            .v5-custom-info .v5-appDownload .qrcode-preview span {
+                font-size: 14px;
+                line-height: 20px
+            }
+
+            .v5-custom-info .v5-appDownload .app-introduce .download .qrcode:hover .qrcode-preview {
+                width: 150px;
+                height: 190px;
+                opacity: 1
+            }
+
+            .v5-custom-info .v5-register-guide {
+                width: 100%;
+                height: 0;
+                text-align: center;
+                padding-top: 66px;
+                box-sizing: border-box;
+                margin-top: 138px;
+                /* color: #fff */
+            }
+
+            .v5-custom-info .v5-register-guide .title-text {
+                margin-bottom: 16px
+            }
+
+            .v5-custom-info .v5-register-guide p {
+                font-size: 16px;
+                line-height: 21px;
+                margin-bottom: 40px
+            }
+
+            .v5-custom-info .v5-register-guide a {
+                display: flex;
+                margin: auto;
+                width: 240px;
+                height: 50px;
+                box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .1);
+                border-radius: 4px;
+                padding: 0 73px;
+                justify-content: space-between;
+                box-sizing: border-box;
+                align-items: center;
+                color: #fff;
+                position: relative;
+                text-decoration: none
+            }
+
+            .v5-custom-info .v5-register-guide a .btn-hover {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: rgba(0, 0, 0, .1);
+                cursor: pointer;
+                display: none
+            }
+
+            .v5-custom-info .v5-register-guide a:hover .btn-hover {
+                display: block
+            }
+
+            .v5-custom-info .v5-register-guide a span {
+                font-size: 16px
+            }
+
+            .v5-5-cl {
+                color: rgba(22, 24, 29, 1) !important;
+            }
+
+            .v5-6-cl {
+                color: rgba(136, 143, 161, 1) !important;
+            }
+
+            .icon {
+                width: 1em;
+                height: 1em;
+                vertical-align: -0.15em;
+                fill: currentColor;
+                overflow: hidden;
+            }
+
+            .icon-24 {
+                font-size: 24px;
+            }
+
+            body,
+            button,
+            dd,
+            dl,
+            dt,
+            form,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            html,
+            img,
+            input,
+            li,
+            ol,
+            p,
+            select,
+            table,
+            tbody,
+            td,
+            textarea,
+            th,
+            tr,
+            ul {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                vertical-align: baseline;
+            }
+
+            b,
+            button,
+            em,
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6,
+            input,
+            p,
+            select,
+            textarea {
+                font-weight: 400;
+            }
+
+            /* .v5-1-bg {
+                background-color: rgba(39, 98, 255, 1) !important;
+            } */
+
+            .v5-13-bg {
+                background-color: #2762FF !important;
+            }
+
+            .b-2-cl {
+                color: rgba(136, 143, 161, 1) !important;
+            }
+
+            .v5-20-bg {
+                background-color: rgba(255, 255, 255, 1) !important;
+            }
+
+            del,
+            em,
+            i,
+            s,
+            u {
+                font-style: normal;
+                text-decoration: none;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            ul {
+                list-style: none;
+            }
+
+            .footer {
+                background-color: #030b16;
+                padding: 70px 0;
+            }
+
+            .footer-col {
+                width: 15%;
+                /* padding: 0 15px; */
+                /* padding-bottom: 7%; */
+                padding-right: 1%;
+            }
+
+            .footer-col h4 {
+                font-size: 18px;
+                color: #ffffff;
+                text-transform: capitalize;
+                margin-bottom: 35px;
+                font-weight: 500;
+                position: relative;
+                font-family: 'Roboto';
+            }
+
+            .footer-col h4::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                /* bottom: -10px;
+                background-color: grey; */
+                height: 2px;
+                box-sizing: border-box;
+                width: 50px;
+            }
+
+            .footer-col ul li:not(:last-child) {
+                margin-bottom: 10px;
+            }
+
+            .footer-col ul li a {
+                font-size: 14px;
+                text-transform: capitalize;
+                text-decoration: none;
+                font-weight: 300;
+                color: rgba(255, 255, 255, 0.6);
+                display: block;
+                transition: all 0.3s ease;
+            }
+
+
+            .footer-col ul li a:hover {
+                color: #ffffff;
+                /* padding-left: 8px; */
+            }
+
+            .footer-col .social-links a {
+                display: inline-block;
+                height: 40px;
+                width: 40px;
+                background-color: rgba(255, 255, 255, 0.2);
+                margin: 0 10px 10px 0;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 50%;
+                color: #ffffff;
+                transition: all 0.5s ease;
+            }
+
+            .footer-col .social-links a:hover {
+                color: #24262b;
+                background-color: #ffffff;
+            }
+
+            /*responsive*/
+            @media(max-width: 767px) {
+                .footer-col {
+                    width: 50%;
+                    margin-bottom: 30px;
+                }
+            }
+
+            @media(max-width: 574px) {
+                .footer-col {
+                    width: 100%;
+                }
+            }
+
+            li,
+            ol,
+            ul {
+                list-style: none;
+                font-family: 'Roboto';
+            }
+
+            .cent_fnt {
+                color: #16181D;
+                text-align: center;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400 !important;
+                font-size: 36px;
+            }
+
+            .topadju {
+                padding-top: 19% !important;
+            }
+
+            .top_pos {
+                margin-top: -3% !important;
+            }
+
+            .cur_fnt {
+                color: #16181D;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400 !important;
+                font-size: 32px !important;
+            }
+
+            .lern_fnt {
+                color: #888FA1;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            .trade_fnt {
+                font-weight: 400 !important;
+                color: #16181D;
+            }
+
+            .bgcol {
+                background: #F8F8F8;
+                border-radius: 16px;
+                padding: 20px 6%;
+            }
+
+            .tickimg {
+                padding-right: 25px;
+            }
+
+            .bgsecol,
+            .ser_bg {
+                /* background: #F8F8F8; */
+                border-radius: 16px;
+                padding: 20px 32px;
+            }
+
+            .com_bg {
+                background: #2762FF;
+                border-radius: 16px;
+                padding: 55px 12px;
+            }
+
+            .bg_item {
+                width: 210px;
+            }
+
+            .comft {
+                color: #FFFFFF !important;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+
+            .subft {
+                color: #FFFFFF !important;
+                opacity: 0.5;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 24px;
+            }
+
+            .qtpr {
+                padding-top: 5%;
+                padding-right: 6%;
+            }
+
+            .scwp {
+                color: #16181D !important;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400 !important;
+                font-size: 32px !important;
+                line-height: 40px;
+            }
+
+            .qualpr {
+                color: #888FA1 !important;
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400 !important;
+                font-size: 16px !important;
+            }
+
+            .marq_hero {
+                padding-top: 5%;
+                padding-bottom: 5%;
+            }
+
+            .reg_tst {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                text-align: center;
+                color: #1C242C;
+                padding-bottom: 3%;
+            }
+
+            .bgwav {
+                background-image: url(images/bgwave.png);
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .player {
+                /* position: absolute;
+                top: 425%;
+                left: 5%; */
+                max-height: 58px;
+            }
+
+            .player img {
+                width: 1261px;
+                margin-left: 3%;
+            }
+
+            .proud_bg {
+                background: #2762FF;
+                border-radius: 16px;
+                padding: 5% 20%;
+            }
+
+            .titlspo {
+                padding-bottom: 5%;
+            }
+
+            .prud_tzt {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 150%;
+                letter-spacing: -0.019em;
+                color: #FFFFFF !important;
+            }
+
+            .qt_tzt {
+                font-family: 'Roboto';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 21px;
+                color: #FFFFFF !important;
+                opacity: 0.5;
+            }
+
+            .tshirt_main {
+                max-height: 42px;
+                margin-left: 72%;
+            }
+
+            .trdback {
+                background: rgba(26, 106, 244, 0.08);
+                border-radius: 16px;
+            }
+
+            .mob_main {
+                max-height: 65px;
+                margin-left: 50%;
+            }
+
+
+            .community_icons {
+                margin: 0px 0px 0px 0px;
+            }
+
+            .icon_img {
+                padding-left: 11px;
+            }
+
+            /* .pdg_img img {
+                padding-bottom: 10%;
+                padding-top: 10%;
+            } */
+
+            .logsclp_img {
+                padding-bottom: 3%;
+            }
+
+            .div-cop,
+            .jurids {
+                color: rgba(255, 255, 255, 0.6);
+                font-weight: 400;
+                font-size: 11px;
+            }
+
+            .div-cop_main {
+                display: flex;
+                justify-content: space-between;
+                padding-top: 2%;
+                border-top: 1px solid rgba(255, 255, 255, 0.12);
+            }
+
+            .community_foot {
+                padding-bottom: 3%;
+            }
+
+            .cryjou {
+                color: #525D79;
+                text-align: center;
+                font-weight: 400;
+                font-size: 14px;
+                padding-top: 10px;
+            }
+
+            .begbg {
+                text-align: center;
+            }
+
+            .backint {
+                background: rgba(26, 106, 244, 0.08);
+                border-radius: 16px;
+                padding: 20px;
+                height: 191px;
+            }
+
+            .learnsec {
+                padding-top: 35%;
+            }
+
+            .advft {
+                color: #525D79;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                padding-top: 10px;
+            }
+
+            .begncards {
+                padding-bottom: 10%;
+            }
+
+            .pdg_img {
+                padding-right: 10px;
+            }
+
+            ul,
+            menu,
+            dir {
+                display: block;
+                list-style-type: disc;
+                /* -webkit-margin-before: 1em;
+                -webkit-margin-after: 1em;
+                -webkit-margin-start: 0px;
+                -webkit-margin-end: 0px;
+                -webkit-padding-start: 40px; */
+            }
+
+            .brand-logos {
+                margin: 0;
+                padding: 0;
+            }
+
+            ul {
+                list-style-type: none;
+            }
+
+            .brand-logos li {
+                display: inline-block;
+                padding: 50px 40px 0;
+                vertical-align: middle;
+            }
+
+            .brands {
+                padding-top: 20px;
+                padding-bottom: 63px;
+            }
+
+            .text-center {
+                text-align: center;
+            }
+
+            .mountains_hero {
+                display: flex;
+                align-items: center;
+                padding-bottom: 3%;
+                background: rgba(26, 106, 244, 0.8);
+                border-radius: 16px;
+                width: 585px;
+                height: 133px;
+                justify-content: space-around;
+            }
+
+            .mounthill {
+                padding-bottom: 5%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .first_zero p {
+                color: #FFFFFF;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 30px;
+                padding-top: 10%;
+            }
+
+            .floating {
+                float: left;
+                width: 50%;
+            }
+
+            .main_hd {
+                font-weight: 400;
+                font-size: 23px;
+            }
+
+            .sub_hd {
+                font-size: 14px;
+                font-weight: 400;
+                color: rgba(0, 20, 42, 0.6);
+            }
+
+            .btcn {
+                padding-bottom: 10px;
+            }
+
+            .cnpd {
+                padding-top: 10px;
+            }
+
+            .app-preview {
+                padding-top: 12%;
+            }
+
+            @media (min-width:2000px) and (max-width:2100px) {
+                .player img {
+                    width: 1261px;
+                    margin-left: 18%;
+                }
+            }
+
+            .bgfeat {
+                background: #FFFFFF;
+                box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.05);
+                border-radius: 16px;
+            }
+
+            .ftrd {
+                padding-bottom: 6%;
+            }
+
+            .ftrdesc {
+                padding-bottom: 5%;
+            }
+
+            #more {
+                display: none;
+            }
+        </style>
+        <div class="v5-guide">
+            <h2 class="v5-5-cl title-text cent_fnt">Learn More About Crypto With Scallop</h2>
+            <p class="cryjou">Start Your Crypto Journey Now</p>
+            <!-- <div class="v5-6-cl title-tip">You can start learning about digital currency trading </div> -->
+            <!-- <div class="guide-content">
+                <dl class="guide-item item-1">
+                    <dt class="begbg">
+                        <img alt="" src="images/beginer.png">
+                        <a href="javascript:void;" class="layout"></a>
+                    </dt>
+                    <dd class="v5-5-cl">Learn How to Exchange your Fiat Currency for our huge range of cryptocurrencies.
+                    </dd>
+                </dl>
+                <dl class="guide-item item-2">
+                    <dt><img alt="" src="images/inter.png">
+                        <a href="javascript:void;" class="layout"></a>
+                    </dt>
+                    <dd class="v5-5-cl">Learn The Added Security Benefits of Switching to Crypto </dd>
+                </dl>
+                <dl class="guide-item item-3">
+                    <dt><img alt="" src="images/switch.png">
+                        <a href="javascript:void;" class="layout"></a>
+                    </dt>
+                    <dd class="v5-5-cl">What is the purpose of cryptocurrency in the modern world? </dd>
+                </dl>
+            </div> -->
+        </div>
+        <div class="v5-service begncards">
+            <div class="service-content">
+                <dl class="service-item item-1 backint">
+                    <dt class="begbg"><img alt="" src="images/beginer.png" style="padding-top:13px;">
+                    </dt>
+                    <dd class="v5-5-cl learnsec">Begginers Guide
+                    </dd>
+                    <p class="advft">Start your adventure by learning the way you want, with<br>time you need. Answers
+                        to
+                        all your basic
+                        questions.</p>
+                </dl>
+                <dl class="service-item item-2 backint">
+                    <dt class="begbg"><img alt="" src="images/inter.png">
+                    </dt>
+                    <dd class="v5-5-cl learnsec">Intermediate Guide
+                    </dd>
+                    <p class="advft">Your intermediate guide on what can you do on an<br>exchange?</p>
+                </dl>
+                <dl class="service-item item-3 backint">
+                    <dt class="begbg">
+                        <img alt="" src="images/switch.png">
+                    </dt>
+                    <dd class="v5-5-cl learnsec">Switching to Crypto
+                    </dd>
+                    <p class="advft">Learn The Added Security Benefits of Switching to<br>Crypto</p>
+                </dl>
+                <!-- <dl class="service-item item-4">
+                    <dt><img alt="" src="http://dev-saas-oss.oss-cn-hongkong.aliyuncs.com/upload/20211019155033740.svg">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl">24*7 Support</div><span class="v5-6-cl">24*7 hours all-weather, full-time
+                            operation mode, the first time for you to answer related inquiries.</span>
+                    </dd>
+                </dl> -->
+            </div>
+        </div>
+        <!-- <div class="v5-appDownload top_pos">
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">Currency Exchange</h2>
+                <div class="v5-6-cl title-tip lern_fnt">Learn How to Exchange your Fiat Currency for our<br>huge range
+                    of
+                    cryptocurrencies.</div>
+            </div>
+            <div class="app-preview"><img alt="" src="images/currecy exch.png"></div>
+        </div> -->
+        <!-- <div class="v5-appDownload top_pos">
+            <div class="app-preview"><img alt="" src="images/switchtocrypto.png"></div>
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">Switching to Crypto</h2>
+                <div class="v5-6-cl title-tip lern_fnt">Learn The Added Security Benefits of Switching<br>to Crypto
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="v5-appDownload top_pos">
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">Exchange your Fait Currency</h2>
+                <div class="v5-6-cl title-tip lern_fnt">Learn How to Exchange your Fiat Currency for our huge<br>range
+                    of
+                    cryptocurrencies.</div>
+            </div>
+            <div class="app-preview"><img alt="" src="images/exchurfiat.png"></div>
+        </div> -->
+        <div class="v5-service titlspo">
+            <!-- <h2 class="v5-5-cl title-text">Scallop is with you</h2> -->
+            <div class="mob_main">
+                <img src="images/mobile.png">
+            </div>
+            <div class="service-content trdback">
+                <div class="v5-appDownload">
+                    <div class="app-introduce">
+                        <h2 class="v5-5-cl title-text trade_fnt">Trade Anytime, Anywhere.</h2>
+                        <div class="v5-6-cl title-tip lern_fnt">Explore what sets us apart:</div>
+                        <ul>
+                            <li class="intro-item">
+                                <!-- <svg aria-hidden="true" class="icon icon-24">
+                                    <use xlink:href="#icon-v5_6"></use>
+                                </svg> -->
+                                <img src="images/tick.png" class="tickimg">
+                                <div>
+                                    <p class="v5-5-cl">Lightning Fast Trading Performance</p><span class="v5-6-cl">Our
+                                        fast
+                                        transaction speeds allow you to never miss a move, even in the most volatile
+                                        markets</span>
+                                </div>
+                            </li>
+                            <li class="intro-item">
+                                <!-- <svg aria-hidden="true" class="icon icon-24">
+                                    <use xlink:href="#icon-v5_6"></use>
+                                </svg> -->
+                                <img src="images/tick.png" class="tickimg">
+                                <div>
+                                    <p class="v5-5-cl">Customisable Trading Panel</p><span class="v5-6-cl">Curate and
+                                        Edit your
+                                        favourite cryptocurrency pairs in an easy to use interface</span>
+                                </div>
+                            </li>
+                            <li class="intro-item">
+                                <!-- <svg aria-hidden="true" class="icon icon-24">
+                                    <use xlink:href="#icon-v5_6"></use>
+                                </svg> -->
+                                <img src="images/tick.png" class="tickimg">
+                                <div>
+                                    <p class="v5-5-cl">Dynamic and Easy Switching between Fiat And Crypto</p><span
+                                        class="v5-6-cl">Easily exchange your fiat into a wide range of cryptocurrencies,
+                                        and
+                                        back again!</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="download"><a href="/appDownload"><img alt=""
+                                    src="https://chaindown-oss.oss-accelerate.aliyuncs.com/static/2/images/ffd8363db2e5beee2b432043174a788f.png"
+                                    class="download-store"> </a><a href="/appDownload"><img alt=""
+                                    src="https://chaindown-oss.oss-accelerate.aliyuncs.com/static/2/images/2fe56f6f88dfee54570948c9d0bf397d.png"
+                                    class="download-store"> </a>
+                            <!-- <span class="qrcode">
+                                <i class="img v5-20-bg hoverHide">
+                                    <svg aria-hidden="true" class="icon icon-24">
+                                        <use xlink:href="#icon-v5_10"></use>
+                                    </svg> </i><i class="img v5-20-bg hoverShow"><svg aria-hidden="true" class="icon icon-24">
+                                        <use xlink:href="#icon-v5_10_h"></use>
+                                    </svg></i>
+                                <aside class="qrcode-preview">
+                                    <div><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAIAAAAiOjnJAAADO0lEQVR42u3bUXKlMAxFQfa/6WQH
+        qUohXcm4z//wwO58aAzPj9TQYwkElsASWBJYAktgSWAJLIElgSWwBJYElsASWBJYAktgSWAJLIEl
+        gSWwBJYEli6A9aT6+3cLb/LND8VusnAlwQILLLDAAgsssMC6FVbsyoVLWfgIb4xOrSRYYIEFFlhg
+        gQUWWGCdM44VTsExdrGVBAsssMACCyywwAILrNfLMXXlPtBggQUWWGCBBRZYYIFlKiw9WjEVggUW
+        WGCBBRZYYIH1UVhTV+7b79g0esQegQUWWGCBBRZYYIF1Mqy+pua+JfNm30qCBRZYYIEFFlhggXUN
+        rKli89fys5Qt2wEWWGCBBRZYYIEF1nlT4b92pXAL+450+lD23cYH/7sBLLDAAgsssMACC6x6WPlH
+        Kh8S+54o9hFHfhoFCyywwAILLLDAAusyWLFXjk4c1sACCyywwAILLLDAAis7nU1due90aMnZEVhg
+        gQUWWGCBBRZYYGWnwiNmt9gJz1mBBRZYYIEFFlhggfV1WLEjjqlBb+eXJmCBBRZYYIEFFlhg3Qqr
+        T+HUBsem4MKxFyywwAILLLDAAgsssJphxdbuxEGvTz9YYIEFFlhggQUWWGBljykK/21McOxLky98
+        TAEWWGCBBRZYYIEF1i1fQvedDk39XS3/8gIssMACCyywwAILrBNgTc1QsS2MvTRWKPgLUyFYYIEF
+        FlhggQUWWLumidjzT8Gamkbz6wwWWGCBBRZYYIEF1oGwnpXFRqqdgsECCyywwAILLLDAAmvTRDm+
+        su9vsnBmvP1IByywwAILLLDAAgus1XNQ7GjlzaWm3j8DCyywwAILLLDAAgus5meIrd2Jb1wVzptg
+        gQUWWGCBBRZYYIGV3bPYjvY9/s43zMACCyywwAILLLDAAqv5iGPnDy058AELLLDAAgsssMACC6xR
+        WLGb7Ju/YjMjWGCBBRZYYIEFFlhgZd/H6tukwis3TmFggQUWWGCBBRZYYIFV/IRTbyD1nXj07ejU
+        yAwWWGCBBRZYYIEF1jWwJLAElsCSwBJYAktgSWAJLIElgSWwBJYElsASWBJYAktgSWAJLIElgSWw
+        BJYElsDSPf0C3K3Y/EbFfLIAAAAASUVORK5CYII="></div><span style="color:#16181d">Scan to download APP</span>
+                                </aside>
+                            </span> -->
+                        </div>
+                    </div>
+                    <!-- <div class="app-preview"><img alt=""
+                            src="http://dev-saas-oss.oss-cn-hongkong.aliyuncs.com/upload/20220119115626270.png">
+                    </div> -->
+                </div>
+            </div>
+        </div>
+        <div class="v5-service">
+            <h2 class="v5-5-cl title-text cent_fnt">Start your digital currency<br>journey</h2>
+        </div>
+        <div class="v5-appDownload top_pos">
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">All of Your Assets, In One Place</h2>
+                <div class="v5-6-cl title-tip lern_fnt">Discover promising coins that cannot be found on other<br>
+                    exchanges.
+                </div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/btc.png">
+                    </div>
+                    <strong class="main_hd">100+</strong>
+                    <p class="sub_hd cnpd">Coins</p>
+                </div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/billion.png">
+                    </div>
+                    <strong class="main_hd">10 Billion</strong>
+                    <p class="sub_hd cnpd">Accumulated Trading Volume(USD)</p>
+                </div>
+            </div>
+            <div class="app-preview"><img src="images/onee.png"></div>
+        </div>
+        <div class="v5-appDownload top_pos">
+            <div class="app-preview"><img alt="" src="images/two.png"></div>
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">Regulated and Insured Accounts</h2>
+                <div class="v5-6-cl title-tip lern_fnt">Scallop proved
+                </div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/glbl.png">
+                    </div>
+                    <strong class="main_hd">7+</strong>
+                    <p class="sub_hd cnpd">Global Licenses</p>
+                </div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/insuran.png">
+                    </div>
+                    <strong class="main_hd">USD 100 Million</strong>
+                    <p class="sub_hd cnpd">Insurance</p>
+                </div>
+            </div>
+        </div>
+        <div class="v5-appDownload top_pos">
+            <div class="app-introduce topadju">
+                <h2 class="v5-5-cl title-text cur_fnt">Deep Liquidity & Cheaper Fees</h2>
+                <div class="v5-6-cl title-tip lern_fnt">We are using a combined liquidity from all Exchanges<br>
+                    To offer deep liquidity on all major pairs at cheaper fees</div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/btc.png">
+                    </div>
+                    <strong class="main_hd">100+</strong>
+                    <p class="sub_hd cnpd">Coins & Futures</p>
+                </div>
+                <div class="floating">
+                    <div class="btcn">
+                        <img src="images/accumula.png">
+                    </div>
+                    <strong class="main_hd">USD 25Million </strong>
+                    <p class="sub_hd cnpd">Liquidity in 2% Range of BTC </p>
+                </div>
+            </div>
+            <div class="app-preview"><img alt="" src="images/thre.png"></div>
+        </div>
+        <div class="v5-service">
+            <h2 class="v5-5-cl title-text cent_fnt">Scallop is with you</h2>
+            <div class="service-content">
+                <dl class="service-item item-1 bgsecol">
+                    <dt><img alt="" src="images/community.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl">Community</div><span class="v5-6-cl">Scallop is here for you. Come talk
+                            to<br>
+                            us in our communities</span>
+                    </dd>
+                </dl>
+                <dl class="service-item item-2 bgsecol">
+                    <dt><img alt="" src="images/scallop.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl">Scallop</div><span class="v5-6-cl">Trade and invest better by
+                            learning<br>more
+                            about crypto</span>
+                    </dd>
+                </dl>
+                <dl class="service-item item-3 bgsecol">
+                    <dt><img alt="" src="images/partnership.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl">Partnerships</div><span class="v5-6-cl">Together we make crypto greater.
+                            Contact<br>us for partnership opportunities</span>
+                    </dd>
+                </dl>
+                <!-- <dl class="service-item item-4">
+                    <dt><img alt="" src="http://dev-saas-oss.oss-cn-hongkong.aliyuncs.com/upload/20211019155033740.svg">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl">24*7 Support</div><span class="v5-6-cl">24*7 hours all-weather, full-time
+                            operation mode, the first time for you to answer related inquiries.</span>
+                    </dd>
+                </dl> -->
+            </div>
+        </div>
+        <div class="v5-service ftrdesc">
+            <h2 class="v5-5-cl cent_fnt ftrd">Featured in</h2>
+            <section class="brands text-center bgfeat">
+                <ul class="brand-logos" style="padding-bottom:5%;">
+                    <li>
+                        <img alt="forbes" height="70" src="images/forbes.png" width="126">
+                    </li>
+                    <li>
+                        <img alt="cointele" height="45" src="images/cointele.png" width="198">
+                    </li>
+                    <li>
+                        <img alt="coinmark" height="45" src="images/coinmark.png" width="191">
+                    </li>
+                    <li>
+                        <img alt="yahoo" height="45" src="images/yahoo.png" width="107">
+                    </li>
+                    <li>
+                        <img alt="bloomberg" height="39" src="images/bloomberg.png" width="162">
+                    </li>
+                    <li>
+                        <img alt="investing" height="34" src="images/investing.png" width="158">
+                    </li>
+                    <li>
+                        <img alt="investing" height="34" src="images/nasdaq.png" width="131">
+                    </li>
+                    <li>
+                        <img alt="forbes" height="70" src="images/bitcoinist.svg" width="190">
+                    </li>
+                    <li>
+                        <img alt="gulfnews" height="26" src="images/gulfnews.png" width="184">
+                    </li>
+                    <span id="dots"></span>
+                    <span id="more">
+                        <li>
+                            <img alt="bloomberg" height="39" src="images/coinslate.png" width="136">
+                        </li>
+                        <li>
+                            <img alt="yahoo" height="45" src="images/newsbtc.png" width="136">
+                        </li>
+                        <li>
+                            <img alt="cointele" height="45" src="images/benzinga.png" width="158">
+                        </li>
+                        <li>
+                            <img alt="coinmark" height="45" src="images/cointelligence.png" width="244">
+                        </li>
+                        <li>
+                            <img alt="gulfnews" height="32" src="images/coinpedia.png" width="176">
+                        </li>
+                        <li>
+                            <img alt="inside" height="40" src="images/inside.png" width="151">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/coinspeaker.png" width="196">
+                        </li>
+                        <li>
+                            <img alt="inside" height="40" src="images/IHODL.png" width="155">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/utoday.png" width="173">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/nulltx.png" width="121">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/blockchain magazin.png" width="178">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/zycrypto.png" width="150">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/cryptoslate.png" width="201">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/cfn.png" width="116">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/blockonomi.png" width="204">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/cryptopotato.png" width="186">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/cryptonewz.png" width="192">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/blockmanity.png" width="186">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/insidecrypto.png" width="185">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/cryptoiscoming.png" width="201">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/coindol.png" width="142">
+                        </li>
+                        <li>
+                            <img alt="investing" height="40" src="images/challengerinside.png" width="120">
+                        </li>
+                        <li>
+                            <img alt="investing" height="50" src="images/marketwatch.png" width="211">
+                        </li>
+                    </span>
+                </ul>
+                <a onclick="myFunction()" id="myBtn"
+                    style="float:right;padding-right: 4%;color:blue;font-weight:600">See more</a>
+            </section>
+        </div>
+        <!-- <div class="v5-service">
+            <div class="service-content ser_bg">
+                <dl class="service-item item-1 qtpr">
+                    <dd>
+                        <div class="v5-5-cl scwp">Scallop is with you</div><span class="v5-6-cl qualpr">Quality products
+                            for
+                            you</span>
+                    </dd>
+                </dl>
+                <dl class="bg_item item-1 com_bg">
+                    <dt><img alt="" src="images/com.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl comft">Community</div><span class="v5-6-cl subft">Huobi is here for you.
+                            Come<br>talk to
+                            us
+                            in our<br>communities</span>
+                    </dd>
+                </dl>
+                <dl class="bg_item item-2 com_bg">
+                    <dt><img alt="" src="images/clp.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl comft">Scallop</div><span class="v5-6-cl subft">Trade and invest better
+                            by<br>learning
+                            more
+                            about crypto</span>
+                    </dd>
+                </dl>
+                <dl class="bg_item item-3 com_bg">
+                    <dt><img alt="" src="images/clp.png">
+                    </dt>
+                    <dd>
+                        <div class="v5-5-cl comft">Partnerships</div><span class="v5-6-cl subft">Together we make
+                            crypto<br>greater.
+                            Contact us for<br>partnership opportunities</span>
+                    </dd>
+                </dl>
+            </div>
+        </div> -->
+        <!-- <div class="marq_hero">
+            <h2 class="v5-5-cl title-text cent_fnt">Featured in</h2>
+            <div class="marquee">
+                <ul class="marquee-content">
+                    <li><img src="images/forbes.png" alt=""></li>
+                    <li><img src="images/bloomberg.png" alt=""></li>
+                    <li><img src="images/yahoo.png" alt=""></li>
+                    <li><img src="images/cointele.png" alt=""></li>
+                    <li><img src="images/coinmark.png" alt=""></li>
+                    <li><img src="images/gulfnews.png" alt=""></li>
+                    <li><img src="images/nasdaq.png" alt=""></li>
+                    <li><img src="images/inside.png" alt=""></li>
+                    <li><img src="images/investing.png" alt=""></li>
+                </ul>
+            </div>
+        </div> -->
+        <div class="player">
+            <img src="images/player.png">
+        </div>
+        <div class="v5-1-bg v5-register-guide bgwav" style="height: 300px;padding-top: 4%;">
+            <h1 class=" title-text">Kick off your crypto journey</h1>
+            <p>Register your account immediately and start trading.</p><a href="/register"
+                class="v5-13-bg"><span>Register now</span><span class="btn-hover"></span></a>
+        </div>
+        <!-- <div class="v5-service">
+            <h2 class="v5-5-cl kik_tzt cent_fnt">Kick off your crypto journey</h2>
+            <p class="reg_tst">Register your account immediately and start trading.</p>
+            <p class="regnow">Register now</p>
+        </div> -->
+        <!-- <div class="v5-service titlspo" style="margin-bottom:8%;">
+            <div class="tshirt_main">
+                <img src="images/tshirt.png">
+            </div>
+            <div class="service-content proud_bg">
+                <dl class="item-1">
+                    <dd>
+                        <div class="v5-5-cl prud_tzt">Scallops is Proud Tittle sponsor of Norwich FC</div><span
+                            class="v5-6-cl qualpr qt_tzt">Quality products for you</span>
+                    </dd>
+                </dl>
+            </div>
+        </div> -->
+        <div class="v5-service mounthill">
+            <div class="mountains_hero">
+                <div class="first_zero">
+                    <p>Scallop is the first ever crypto<br>
+                        exchange to climb mount everest.</p>
+                </div>
+                <div class="mountains">
+                    <img src="images/mount.png" style="padding-bottom:10px;padding-left: 8%;">
+                </div>
+            </div>
+            <div class="mountains_hero">
+                <div class="first_zero">
+                    <p>Scallops is Proud Tittle sponsor of<br>
+                        Norwich FC</p>
+                </div>
+                <div class="mountains">
+                    <img src="images/tshirt.png" style="padding-top:13px;padding-left: 23%;">
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-col logsclp_img">
+                    <img src="images/exchange logo.png">
+                </div>
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#">Classic Trading</a></li>
+                            <li><a href="#">Advanced Trading</a></li>
+                            <li><a href="#">Advanced Trading</a></li>
+                            <li><a href="#">Futures Trading</a></li>
+                            <li><a href="#">Staking</a></li>
+                            <li><a href="#">Buy Crypto</a></li>
+                            <li><a href="#">P2P</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Services</h4>
+                        <ul>
+                            <li><a href="#">Support Center</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Submit a ticket</a></li>
+                            <li><a href="#">Fees</a></li>
+                            <li><a href="#">Identity verification</a></li>
+                            <li><a href="#">API documentation</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Licenses</a></li>
+                            <li><a href="#">Token Listing</a></li>
+                            <h4 style="padding-top:20%;">App Download</h4>
+                            <div class="community_icons">
+                                <a href="#"><img src="images/playstore.png"></a>
+                                <a href="#" class="icon_img"><img src="images/iphone.png"></a>
+                            </div>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="#">Terms of Use</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Risk Disclosure Statement</a></li>
+                            <li><a href="#">AML & CFT</a></li>
+                            <li><a href="#">GDPR policy</a></li>
+                            <li><a href="#">Terms & conditions</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Learn</h4>
+                        <ul>
+                            <li><a href="#">Accounts</a></li>
+                            <li><a href="#">Cards</a></li>
+                            <li><a href="#">Exchange</a></li>
+                            <li><a href="#">Hardware Walllet</a></li>
+                            <li><a href="#">Payments</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer-col">
+                        <h4>App Download</h4>
+                        <ul>
+                            <li><a href="#">Android Download</a></li>
+                            <li><a href="#">iOS Download</a></li>
+                        </ul>
+                    </div> -->
+                    <div class="footer-col community_foot">
+                        <h4>Community</h4>
+                        <div class="community_icons">
+                            <a href="https://www.linkedin.com/company/scallopx" target="_blank"><img
+                                    src="images/linkedinlogo.png"></a>
+                            <a href="https://t.me/Scallop_Official" target="_blank" class="icon_img"><img
+                                    src="images/telegramlogo.png"></a>
+                            <a href="https://medium.com/scallopx" target="_blank" class="icon_img"><img
+                                    src="images/mlogo.png"></a>
+                            <a href="https://twitter.com/ScallopDefiBank" target="_blank" class="icon_img pdg_img"><img
+                                    src="images/twitterlogo.png"></a>
+                            <a href="https://www.instagram.com/scallop_app/" target="_blank"><img
+                                    src="images/m.png"></a>
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <!-- <h4>App Download</h4>
+                        <div class="community_icons">
+                            <a href="#"><img src="images/playstore.png"></a>
+                            <a href="#" class="icon_img"><img src="images/iphone.png"></a>
+                        </div> -->
+                    </div>
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4></h4>
+                        <ul>
+                            <li><a href="#"></a></li>
+                            <li><a href="#"></a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer-col community_foot">
+                        <h4>Community</h4>
+                        <div class="community_icons">
+                            <a href="#"><img src="images/fb.png"></a>
+                            <a href="#" class="icon_img"><img src="images/twitter.png"></a>
+                            <a href="#" class="icon_img"><img src="images/telegram.png"></a>
+                            <a href="#" class="icon_img"><img src="images/youtube.png"></a>
+                            <a href="#" class="pdg_img"><img src="images/m.png"></a>
+                            <a href="#" class="icon_img pdg_img"><img src="images/pom.png"></a>
+                            <a href="#" class="icon_img pdg_img"><img src="images/git.png"></a>
+                            <a href="#" class="icon_img pdg_img"><img src="images/linked.png"></a>
+                            <a href="#"><img src="images/insta.png"></a>
+                            <a href="#" class="icon_img"><img src="images/m@.png"></a>
+                            <a href="#" class="icon_img"><img src="images/peng.png"></a>
+                            <a href="#" class="icon_img"><img src="images/vk.png"></a>
+                        </div>
+                    </div> -->
+                </div>
+                <div class="div-cop_main">
+                    <div class="div-cop">
+                        <p>CopyRight © 2022 Scallop Exchange. All Rights Reserved.</p>
+                    </div>
+                    <div class="jurids">
+                        <p>Scallop exchange Services and Scallop Token (SCLP) are not available in the United States
+                            or
+                            other prohibited jurisdictions.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- <script>
+            const root = document.documentElement;
+            const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+            const marqueeContent = document.querySelector("ul.marquee-content");
+
+            root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+            for (let i = 0; i < marqueeElementsDisplayed; i++) {
+                marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+            }
+        </script> -->
+        <script>
+            function myFunction() {
+                var dots = document.getElementById("dots");
+                var moreText = document.getElementById("more");
+                var btnText = document.getElementById("myBtn");
+
+                if (dots.style.display === "none") {
+                    dots.style.display = "inline";
+                    btnText.innerHTML = "See more";
+                    moreText.style.display = "none";
+                } else {
+                    dots.style.display = "none";
+                    btnText.innerHTML = "See less";
+                    moreText.style.display = "inline";
+                }
+            }
+        </script>
+</body>
+
+</html>
